@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage('Instalar dependencias') {
             steps {
+                rm -rf node_modules
                 sh 'npm install'
             }
         }
