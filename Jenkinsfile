@@ -8,8 +8,10 @@ pipeline {
     stages {
         stage('Instalar dependencias') {
             steps {
+                sh '''
                 rm -rf node_modules
-                sh 'npm install'
+                npm ci
+                '''
             }
         }
 
